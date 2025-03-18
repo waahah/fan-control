@@ -1,12 +1,71 @@
-软件开发工具与设计流程
+
+开发工具与设计流程
 -------------
 
+### 硬件部分
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center; min-height: 100vh; padding: 20px;">
+  <div style="flex: 0 1 440px; background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); 
+              display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <div style="padding: 12px; font-weight: 500; color: #333; text-align: center;">AD原理图	</div>
+    <a href="assets/img/ad.png" target="_blank" 
+       style="display: block; overflow: hidden; transition: transform 0.3s ease;"
+       onmouseover="this.style.transform='scale(1.03)'" 
+       onmouseout="this.style.transform='scale(1)'">
+      <img src="assets/img/ad.png" 
+           style="width: 100%; height: auto; max-width: 440px; object-fit: contain;">
+    </a>
+  </div>
+  <div style="flex: 0 1 440px; background: #fff; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+              display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <div style="padding: 12px; font-weight: 500; color: #333; text-align: center;">PCB</div>
+    <a href="assets/img/pcb.png" target="_blank" 
+       style="display: block; overflow: hidden; transition: transform 0.3s ease;"
+       onmouseover="this.style.transform='scale(1.03)'" 
+       onmouseout="this.style.transform='scale(1)'">
+      <img src="assets/img/pcb.png" 
+           style="width: 100%; height: auto; max-width: 440px; object-fit: contain;">
+    </a>
+  </div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; padding: 15px;">
+  <div style="flex: 1 1 400px; max-width: calc(50% - 10px); min-width: 300px; margin: 10px; text-align: center;"
+       onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.15)'" 
+       onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'"
+       style="transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <div style="padding:12px; background:#f8f9fa; border-bottom:1px solid #eee; font-weight:500; color:#2d3436;">
+      红外指令
+    </div>
+    <a href="assets/img/XDXK202208047_01900.jpg" target="_blank" style="display:block; overflow:hidden;">
+      <img src="assets/img/XDXK202208047_01900.jpg" 
+           style="width:100%; height:auto; max-width:440px; transition: transform 0.3s ease;"
+           onmouseover="this.style.transform='scale(1.1)'" 
+           onmouseout="this.style.transform='scale(1)'">
+    </a>
+  </div>
+  <div style="flex: 1 1 400px; max-width: calc(50% - 10px); min-width: 300px; margin: 10px; text-align: center;"
+       onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.15)'" 
+       onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.1)'"
+       style="transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;">
+    <div style="padding:12px; background:#f8f9fa; border-bottom:1px solid #eee; font-weight:500; color:#2d3436;">
+      Proteus虚拟仿真
+    </div>
+    <a href="assets/img/proteus.png" target="_blank" style="display:block; overflow:hidden;">
+      <img src="assets/img/proteus.png" 
+           style="width:100%; height:auto; max-width:440px; transition: transform 0.3s ease;"
+           onmouseover="this.style.transform='scale(1.1)'" 
+           onmouseout="this.style.transform='scale(1)'">
+    </a>
+  </div>
+</div>
 ### 软件开发工具
 
 本系统的软件设计主要使用以下工具：
 
 1.  **Keil5**：用于编写和编译程序代码。
 2.  **STC-ISP**：用于将编译好的程序下载到单片机中。
+3.  **Proteus**：用于将编译好的程序进行仿真调试。
 
 #### 安装和配置步骤
 
@@ -22,7 +81,7 @@
 2.  **主循环设计**：主循环采用 `switch` 语句，根据不同的运行状态（如自动模式、手动模式、自然风模式）执行相应的功能模块。
 3.  **中断服务程序**：使用定时器 0、定时器 1 和外部中断 0 来处理不同的任务，如计时、红外信号捕捉和温度测量。
 
-### 4.3 程序模块设计
+### 程序模块设计
 
 #### 主程序模块
 
